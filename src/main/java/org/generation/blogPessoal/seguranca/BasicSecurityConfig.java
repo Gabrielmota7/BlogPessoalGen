@@ -22,8 +22,8 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(UserDetailsService);
 		auth.inMemoryAuthentication()
-		.withUser("root")
-		.password(passwordEncoder().encode("Admin357/"))
+		.withUser("admin")
+		.password(passwordEncoder().encode("admin"))
 		.authorities("ROLE_USER");
 
 		}
